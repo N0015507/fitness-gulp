@@ -11,6 +11,9 @@ var align = require('gulp-align'); //https://www.npmjs.com/package/gulp-align/
 var about = require('gulp-about'); //https://www.npmjs.com/package/gulp-about/
 
 gulp.task('default', ['sass', 'validate', 'htmlhint', 'babel', 'beautify', 'cat', 'align', 'about' ]);
+gulp.task('js', ['babel', 'beautify', 'align']);
+gulp.task('css', ['sass', 'validate']);
+gulp.task('html', ['htmlhint', 'cat' ]);
 
 gulp.task('sass', function() { //tested
   return gulp.src('./assets/sass/*.scss')
